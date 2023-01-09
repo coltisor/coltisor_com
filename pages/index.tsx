@@ -1,9 +1,4 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '../styles/Home.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import Head from "next/head";
 
 export default function Home() {
   return (
@@ -14,11 +9,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.center}>
-          Coltisor Victor
-        </div>
+
+      <main
+        className={"flex h-screen items-center justify-center bg-slate-800"}
+      >
+        <h1 className={"text-white"}>Coltisor Victor</h1>
       </main>
     </>
-  )
+  );
 }
