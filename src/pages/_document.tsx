@@ -16,6 +16,7 @@ export default function Document() {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Inconsolata&display=optional"
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <body className="bg-[#131313] text-[#f2f2f2] scrollbar-hide">
         <Main />
