@@ -3,10 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  h1 {
-    @apply text-8xl;
-  }
-  h2 {
-    @apply text-2xl;
-  }
+  /**
+   */
 }
