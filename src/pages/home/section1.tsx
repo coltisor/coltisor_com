@@ -223,7 +223,7 @@ export default function Section1() {
       <div className="absolute bottom-[10vh] z-0 flex h-[80vh] w-[600px] items-end justify-center overflow-hidden will-change-[opacity]">
         <Image
           id="portrait_bg"
-          src="/portrait.jpg"
+          src="/p_bw.jpg"
           alt=""
           width="501"
           height="940"
@@ -234,7 +234,7 @@ export default function Section1() {
       <div className="absolute bottom-[10vh] z-20 flex h-[80vh] w-[600px] items-end justify-center overflow-hidden will-change-[opacity]">
         <Image
           id="portraitSubject"
-          src="/portrait_sub.png"
+          src="/ps_bw.png"
           alt=""
           width="501"
           height="940"

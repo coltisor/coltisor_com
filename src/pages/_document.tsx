@@ -17,7 +17,7 @@ export default function Document() {
           href="https://fonts.googleapis.com/css?family=Inconsolata&display=optional"
         />
       </Head>
-      <body className="bg-black scrollbar-hide">
+      <body className="bg-[#131313] text-[#f2f2f2] scrollbar-hide">
         <Main />
         <NextScript />
       </body>

@@ -20,7 +20,7 @@ export default function Home() {
       </Head>
 
       <main
-        className="overflow-x-hidden text-white"
+        className="overflow-x-hidden"
         style={{ display: hydrated ? "block" : "none" }}
       >
         <Section1 />
