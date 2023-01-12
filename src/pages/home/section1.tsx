@@ -207,8 +207,8 @@ export default function Section1() {
         id="menu"
         className="absolute top-0 mt-6 flex w-full max-w-[90vw] justify-between font-medium uppercase opacity-80 will-change-[opacity]"
       >
-        <span>Portfolio © 2023</span>
-        <span>EN</span>
+        <span className="hover:cursor-default">Portfolio © 2023</span>
+        <span className="hover:cursor-pointer">EN – RO</span>
       </div>
 
       <div
@@ -223,10 +223,10 @@ export default function Section1() {
       <div className="absolute bottom-[10vh] z-0 flex h-[80vh] w-[600px] items-end justify-center overflow-hidden will-change-[opacity]">
         <Image
           id="portrait_bg"
-          src="/portrait_ai.jpg"
+          src="/portrait.jpg"
           alt=""
-          width="600"
-          height="600"
+          width="501"
+          height="940"
           className="portrait max-h-[80vh] max-w-[80vw]"
         />
       </div>
@@ -234,10 +234,10 @@ export default function Section1() {
       <div className="absolute bottom-[10vh] z-20 flex h-[80vh] w-[600px] items-end justify-center overflow-hidden will-change-[opacity]">
         <Image
           id="portraitSubject"
-          src="/portrait_ai_subject.png"
+          src="/portrait_sub.png"
           alt=""
-          width="600"
-          height="600"
+          width="501"
+          height="940"
           className={`portrait max-h-[80vh] max-w-[80vw] transition-opacity will-change-[opacity]`}
           style={{ opacity: subjectVisible ? 1 : 0 }}
           onMouseEnter={() => setSubjectVisible(true)}

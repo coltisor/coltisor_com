@@ -1,8 +1,15 @@
 import Head from "next/head";
+import { useEffect, useState } from "react";
 import Section1 from "./section1";
 import Section2 from "./section2";
 
 export default function Home() {
+  const [hydrated, setHydrated] = useState(false);
+
+  useEffect(() => {
+    setHydrated(true);
+  }, []);
+
   return (
     <>
       <Head>
@@ -12,7 +19,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="overflow-x-hidden text-white">
+      <main
+        className="overflow-x-hidden text-white"
+        style={{ display: hydrated ? "block" : "none" }}
+      >
         <Section1 />
         <Section2 />
       </main>

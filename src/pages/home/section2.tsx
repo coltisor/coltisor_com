@@ -34,7 +34,7 @@ export default function Section2() {
   return (
     <section
       ref={ctxRef}
-      className="flex h-screen w-screen flex-col items-center justify-center gap-10"
+      className="flex min-h-screen w-screen flex-col items-center justify-center gap-10 px-4 py-10"
     >
       <p className="max-w-[512px] text-justify text-2xl">
         Greetings, my name is Victor Coltisor and I am a pasionate and creative
