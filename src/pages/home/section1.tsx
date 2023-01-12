@@ -220,7 +220,7 @@ export default function Section1() {
         <h1 id="whenWhere">Timisoara</h1>
       </div>
 
-      <div className="absolute bottom-[10vh] z-0 flex h-[80vh] w-[600px] items-end justify-center overflow-hidden will-change-[opacity]">
+      <div className="absolute bottom-[10vh] z-0 flex h-[80vh] w-[600px] max-w-[80vw] items-end justify-center overflow-hidden will-change-[opacity]">
         <Image
           id="portrait_bg"
           src="/p_bw.jpg"
@@ -231,7 +231,7 @@ export default function Section1() {
         />
       </div>
 
-      <div className="absolute bottom-[10vh] z-20 flex h-[80vh] w-[600px] items-end justify-center overflow-hidden will-change-[opacity]">
+      <div className="absolute bottom-[10vh] z-20 flex h-[80vh] w-[600px] max-w-[80vw] items-end justify-center overflow-hidden will-change-[opacity]">
         <Image
           id="portraitSubject"
           src="/ps_bw.png"
