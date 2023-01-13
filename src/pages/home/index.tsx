@@ -17,13 +17,15 @@ export default function Home() {
         <meta name="description" content="Welcome to my personal website" />
       </Head>
 
-      <main
-        className="overflow-x-hidden"
-        style={{ display: hydrated ? "block" : "none" }}
-      >
-        <Section1 />
-        <Section2 />
-      </main>
+      <div className="absolute inset-0">
+        <main
+          className="overflow-x-hidden"
+          style={{ display: hydrated ? "block" : "none" }}
+        >
+          <Section1 />
+          <Section2 />
+        </main>
+      </div>
     </>
   );
 }
