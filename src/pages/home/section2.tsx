@@ -1,13 +1,14 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
+import { useIsoEffect } from "../../hooks/useIsoEffect";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Section2() {
   const ctxRef = useRef(null);
 
-  useLayoutEffect(() => {
+  useIsoEffect(() => {
     let ctx = gsap.context(() => {
       /**
        * Heading In
@@ -34,7 +35,7 @@ export default function Section2() {
   return (
     <section
       ref={ctxRef}
-      className="flex min-h-screen w-screen flex-col items-center justify-center gap-10 px-4 py-10"
+      className="flex min-h-screen w-screen flex-col items-center justify-center gap-10 p-10 max-md:my-[25vh]"
     >
       <p className="max-w-[512px] text-justify text-2xl">
         Greetings, my name is Victor Coltisor and I am a pasionate and creative

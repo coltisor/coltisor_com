@@ -4,12 +4,6 @@ import Section1 from "./section1";
 import Section2 from "./section2";
 
 export default function Home() {
-  const [hydrated, setHydrated] = useState(false);
-
-  useEffect(() => {
-    setHydrated(true);
-  }, []);
-
   return (
     <>
       <Head>
@@ -17,15 +11,10 @@ export default function Home() {
         <meta name="description" content="Welcome to my personal website" />
       </Head>
 
-      <div className="absolute inset-0">
-        <main
-          className="overflow-x-hidden"
-          style={{ display: hydrated ? "block" : "none" }}
-        >
-          <Section1 />
-          <Section2 />
-        </main>
-      </div>
+      <main className="overflow-x-hidden">
+        <Section1 />
+        <Section2 />
+      </main>
     </>
   );
 }
