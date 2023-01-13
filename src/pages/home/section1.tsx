@@ -30,6 +30,7 @@ export default function Section1() {
       t.set(".portrait", { y: -100, opacity: 0 });
       t.set(".portrait", { scale: 1.1 });
       t.set("#portraitSubject", { opacity: 0 });
+      t.set("#greeting", { opacity: 0 });
 
       t.to("#fullName", { opacity: 1, duration: 0.25, delay: 0.25 }, "<");
       t.to("#profession", { opacity: 1, duration: 0.25, delay: 0.25 }, "<");
@@ -165,9 +166,8 @@ export default function Section1() {
       );
 
       /**
-       * Greeting
+       * Greeting - Reveal
        */
-      gsap.set("#greeting", { opacity: 0 });
       gsap.to("#greeting", {
         opacity: 1,
         duration: 1,
@@ -235,7 +235,7 @@ export default function Section1() {
           id="portraitSubject"
           src="/ps_bw.png"
           alt=""
-          className={`portrait max-h-[80vh] max-w-[80vw] object-contain transition-opacity will-change-[opacity]git`}
+          className={`portrait will-change-[opacity]git max-h-[80vh] max-w-[80vw] object-contain transition-opacity`}
           fill
           style={{ opacity: subjectVisible ? 1 : 0 }}
           onMouseEnter={() => setSubjectVisible(true)}
