@@ -31,7 +31,10 @@ export default function Section1() {
         isMobile: `(max-width: ${Breakpoints.md - 1}px)`,
       },
       (context) => {
-        let { isMobile, isDesktop } = context.conditions;
+        let { isMobile, isDesktop } = context.conditions as {
+          isMobile: boolean;
+          isDesktop: boolean;
+        };
 
         /**
          * Heading In
