@@ -225,9 +225,8 @@ export default function Section1() {
           id="portrait_bg"
           src="/p_bw.jpg"
           alt=""
-          width="501"
-          height="940"
-          className="portrait max-h-[80vh] max-w-[80vw]"
+          className="portrait max-h-[80vh] max-w-[80vw] object-contain"
+          fill
         />
       </div>
 
@@ -236,9 +235,8 @@ export default function Section1() {
           id="portraitSubject"
           src="/ps_bw.png"
           alt=""
-          width="501"
-          height="940"
-          className={`portrait max-h-[80vh] max-w-[80vw] transition-opacity will-change-[opacity]`}
+          className={`portrait max-h-[80vh] max-w-[80vw] object-contain transition-opacity will-change-[opacity]git`}
+          fill
           style={{ opacity: subjectVisible ? 1 : 0 }}
           onMouseEnter={() => setSubjectVisible(true)}
           onMouseLeave={() => setSubjectVisible(false)}
