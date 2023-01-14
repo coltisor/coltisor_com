@@ -6,7 +6,7 @@ export const ___ = <T extends Record<string, React.ReactNode>>(
   lang?: "en" | "ro",
   replacements?: T
 ): React.ReactNode => {
-  let result = ____(key, lang);
+  let result = __(key, lang);
 
   if (replacements) {
     const split = result.split(/(\%[\w\d]+\%)/g);
