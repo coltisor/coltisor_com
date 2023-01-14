@@ -24,7 +24,7 @@ export const ___ = <T extends Record<string, React.ReactNode>>(
   return result;
 };
 
-export const ____ = (key: string, lang?: "en" | "ro"): string => {
+export const __ = (key: string, lang?: "en" | "ro"): string => {
   if (lang && lang === "ro") {
     return (ro[key] as string) ?? key;
   }
