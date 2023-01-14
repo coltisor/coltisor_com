@@ -1,5 +1,5 @@
-import { default as HomeInFolder } from "../pages/home";
+import Home from "../pages/home";
 
-export default function Home() {
-  return <HomeInFolder />;
+export default function Index() {
+  return <Home />;
 }

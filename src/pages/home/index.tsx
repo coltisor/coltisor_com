@@ -1,19 +1,28 @@
 import Head from "next/head";
-import { useEffect, useState } from "react";
-import Section1 from "./section1";
-import Section2 from "./section2";
+import Header from "@components/home/header";
+import About from "@components/home/about";
+import { ___, ____ } from "@utils/translate";
 
-export default function Home() {
+type HomeProps = {
+  lang?: "ro" | "en";
+};
+
+export default function Home(props: HomeProps) {
+  const { lang } = props;
+
   return (
     <>
       <Head>
-        <title>Coltisor Victor - Software Developer</title>
-        <meta name="description" content="Welcome to my personal website" />
+        <title>{____("Coltisor Victor - Web Developer")}</title>
+        <meta
+          name="description"
+          content={____("Welcome to my personal website")}
+        />
       </Head>
 
       <main className="overflow-x-hidden">
-        <Section1 />
-        <Section2 />
+        <Header lang={lang} />
+        <About lang={lang} />
       </main>
     </>
   );
