@@ -222,27 +222,31 @@ export default function Header(props: HeaderProps) {
             }
           );
 
-          /**
-           *
-           */
-          document.addEventListener("mousemove", (event) => {
-            let xPos = event.clientX / window.innerWidth - 0.5;
-            let yPos =
-              (window.innerHeight - event.clientY) / window.innerHeight - 0.5;
-
-            gsap.to("#heading", {
-              rotationY: 10 * xPos,
-              rotationX: 10 * yPos,
-              transformPerspective: 900,
-              transformOrigin: "center",
-            });
-          });
+          document.addEventListener("mousemove", animateHeadingPerspective);
         }
       }
     );
 
-    return () => mm.revert();
+    return () => {
+      mm.revert();
+      document.removeEventListener("mousemove", animateHeadingPerspective);
+    };
   }, []);
+
+  /**
+   * Heading perspective to follow mousemove
+   */
+  const animateHeadingPerspective = (event: MouseEvent) => {
+    let xPos = event.clientX / window.innerWidth - 0.5;
+    let yPos = event.clientY / window.innerHeight - 0.5;
+
+    gsap.to("#heading", {
+      rotationY: 10 * xPos,
+      rotationX: -10 * yPos,
+      transformPerspective: 900,
+      transformOrigin: "center",
+    });
+  };
 
   return (
     <section
@@ -270,7 +274,7 @@ export default function Header(props: HeaderProps) {
 
       <div
         id="heading"
-        className="z-10 select-none pb-[25vh] text-center font-serif text-[12vw] will-change-[opacity] [line-height:13vw] md:pb-[10vh] md:text-[10vw] md:[line-height:10vw]"
+        className="z-10 select-none pb-[25vh] text-center font-display text-[12vw] will-change-[opacity] [line-height:13vw] md:pb-[10vh] md:text-[10vw] md:[line-height:10vw]"
       >
         <h1 id="fullName">Victor</h1>
         <h1 id="profession">Web Developer</h1>
