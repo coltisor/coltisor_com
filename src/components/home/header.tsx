@@ -108,7 +108,7 @@ export default function Header(props: HeaderProps) {
           ease: "circ.easeIn",
           scrollTrigger: {
             trigger: "#heading",
-            start: "50% center",
+            start: "50% 45%",
             end: isMobile ? "bottom top" : "70% top",
             scrub: true,
             markers: false,
@@ -121,7 +121,7 @@ export default function Header(props: HeaderProps) {
           ease: "circ.easeIn",
           scrollTrigger: {
             trigger: "#heading",
-            start: isMobile ? "50% center" : "75% center",
+            start: isMobile ? "50% 45%" : "75% center",
             end: isMobile ? "bottom top" : "95% top",
             scrub: true,
             markers: false,
@@ -134,7 +134,7 @@ export default function Header(props: HeaderProps) {
           ease: "circ.easeIn",
           scrollTrigger: {
             trigger: "#heading",
-            start: isMobile ? "50% center" : "100% center",
+            start: isMobile ? "50% 45%" : "100% center",
             end: isMobile ? "bottom top" : "120% top",
             scrub: true,
             markers: false,
@@ -152,7 +152,7 @@ export default function Header(props: HeaderProps) {
               opacity: 1,
               scrollTrigger: {
                 trigger: "#heading",
-                start: "50% center",
+                start: "50% 45%",
                 end: "25% 100px",
                 scrub: true,
                 markers: false,
@@ -163,7 +163,7 @@ export default function Header(props: HeaderProps) {
               opacity: 0,
               scrollTrigger: {
                 trigger: "#heading",
-                start: "50% center",
+                start: "50% 45%",
                 end: "25% 100px",
                 scrub: true,
                 markers: false,
@@ -177,7 +177,7 @@ export default function Header(props: HeaderProps) {
               opacity: 1,
               scrollTrigger: {
                 trigger: "#heading",
-                start: "75% center",
+                start: "75% 45%",
                 end: "50% 100px",
                 scrub: true,
                 markers: false,
@@ -188,7 +188,7 @@ export default function Header(props: HeaderProps) {
               opacity: 0,
               scrollTrigger: {
                 trigger: "#heading",
-                start: "75% center",
+                start: "75% 45%",
                 end: "50% 100px",
                 scrub: true,
                 markers: false,
@@ -202,7 +202,7 @@ export default function Header(props: HeaderProps) {
               opacity: 1,
               scrollTrigger: {
                 trigger: "#heading",
-                start: "100% center",
+                start: "100% 45%",
                 end: "75% 100px",
                 scrub: true,
                 markers: false,
@@ -213,7 +213,7 @@ export default function Header(props: HeaderProps) {
               opacity: 0,
               scrollTrigger: {
                 trigger: "#heading",
-                start: "100% center",
+                start: "100% 45%",
                 end: "75% 100px",
                 scrub: true,
                 markers: false,
@@ -221,6 +221,22 @@ export default function Header(props: HeaderProps) {
               },
             }
           );
+
+          /**
+           *
+           */
+          document.addEventListener("mousemove", (event) => {
+            let xPos = event.clientX / window.innerWidth - 0.5;
+            let yPos =
+              (window.innerHeight - event.clientY) / window.innerHeight - 0.5;
+
+            gsap.to("#heading", {
+              rotationY: 10 * xPos,
+              rotationX: 10 * yPos,
+              transformPerspective: 900,
+              transformOrigin: "center",
+            });
+          });
         }
       }
     );
@@ -239,7 +255,7 @@ export default function Header(props: HeaderProps) {
         className="flex w-full max-w-[90vw] justify-between font-medium uppercase opacity-80 will-change-[opacity]"
       >
         <span className="hover:cursor-default">
-          {___("Coltisor © %year%", lang, { "%year%": 2023 })}
+          {___("%star% Coltisor", lang, { "%star%": "✦" })}
         </span>
         <div className="flex gap-1">
           <Link href="/" className="hover:cursor-pointer">
@@ -254,7 +270,7 @@ export default function Header(props: HeaderProps) {
 
       <div
         id="heading"
-        className="z-10 pb-[25vh] text-center font-serif text-[12vw] will-change-[opacity] [line-height:13vw] md:pb-[10vh] md:text-[10vw] md:[line-height:10vw]"
+        className="z-10 select-none pb-[25vh] text-center font-serif text-[12vw] will-change-[opacity] [line-height:13vw] md:pb-[10vh] md:text-[10vw] md:[line-height:10vw]"
       >
         <h1 id="fullName">Victor</h1>
         <h1 id="profession">Web Developer</h1>
