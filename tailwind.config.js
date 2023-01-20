@@ -8,18 +8,12 @@ module.exports = {
   ],
   theme: {
     extend: {},
-    /**
-     * Font Family
-     */
     fontFamily: {
+      display:
+        'Comfortaa, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
       sans: 'Jost, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-      serif:
-        '"Jacques Francois", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
       mono: 'Inconsolata, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
     },
-    /**
-     * Breakpoints | Keep in sync with styles/breakpoints.ts
-     */
     screens: {
       sm: "640px",
       md: "768px",

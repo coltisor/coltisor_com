@@ -1,6 +1,10 @@
 import React from "react";
 const ro = require("@locale/ro.json");
 
+/**
+ * Translation Function ___ (Three Dashes)
+ * -> returns a <span>
+ */
 export const ___ = <T extends Record<string, React.ReactNode>>(
   key: string,
   lang?: "en" | "ro",
@@ -24,6 +28,10 @@ export const ___ = <T extends Record<string, React.ReactNode>>(
   return result;
 };
 
+/**
+ * Translation Function __ (Two Dashes)
+ * -> returns a string
+ */
 export const __ = (key: string, lang?: "en" | "ro"): string => {
   if (lang && lang === "ro") {
     return (ro[key] as string) ?? key;

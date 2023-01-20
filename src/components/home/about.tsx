@@ -41,7 +41,7 @@ export default function About(props: AboutProps) {
   return (
     <section
       ref={ctxRef}
-      className="flex min-h-screen w-screen flex-col items-center justify-center gap-10 p-10 max-md:my-[25vh]"
+      className="flex min-h-screen w-screen flex-col items-center justify-center gap-10 p-10 max-md:my-[15vh]"
     >
       <p className="max-w-[512px] text-justify text-2xl">
         {___(

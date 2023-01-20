@@ -6,17 +6,23 @@ export default function Document() {
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap"
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Jacques+Francois&display=optional"
         />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Jost&display=optional"
+          href="https://fonts.googleapis.com/css2?family=Jost&display=optional"
         />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Inconsolata&display=optional"
+          href="https://fonts.googleapis.com/css2?family=Inconsolata&display=optional"
         />
         <link rel="icon" href="favicon.ico" />
         <link
