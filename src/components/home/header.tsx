@@ -287,7 +287,7 @@ export default function Header(props: HeaderProps) {
           id="portrait_bg"
           src="/pic.jpg"
           alt=""
-          className="portrait pointer-events-none max-h-[80vh] max-w-[80vw] select-none object-contain"
+          className="portrait pointer-events-none max-h-[80vh] max-w-[80vw] select-none object-contain grayscale-[100%]"
           fill
         />
       </div>
@@ -297,7 +297,7 @@ export default function Header(props: HeaderProps) {
           id="portraitSubject"
           src="/pic_fg.png"
           alt=""
-          className={`portrait pointer-events-none max-h-[80vh] max-w-[80vw] select-none object-contain transition-opacity will-change-[opacity]`}
+          className={`portrait pointer-events-none max-h-[80vh] max-w-[80vw] select-none object-contain transition-opacity will-change-[opacity] grayscale-[100%]`}
           fill
           style={{ opacity: subjectVisible ? 1 : 0 }}
         />
