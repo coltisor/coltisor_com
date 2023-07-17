@@ -22,11 +22,6 @@ export default function Home(props: HomeProps) {
       </Head>
 
       <main className={"overflow-x-hidden " + styles.main}>
-        <div className={styles.univers}>
-          <div className={styles.stars}></div>
-          <div className={styles.stars2}></div>
-          <div className={styles.stars3}></div>
-        </div>
         <Header lang={lang} />
         <About lang={lang} />
       </main>

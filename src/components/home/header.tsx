@@ -285,7 +285,7 @@ export default function Header(props: HeaderProps) {
         <Image
           priority={true}
           id="portrait_bg"
-          src="/p_bw.jpg"
+          src="/pic.jpg"
           alt=""
           className="portrait pointer-events-none max-h-[80vh] max-w-[80vw] select-none object-contain"
           fill
@@ -295,7 +295,7 @@ export default function Header(props: HeaderProps) {
       <div className="absolute bottom-[10vh] z-20 flex h-[80vh] w-[550px] max-w-[65vw] items-center justify-center overflow-hidden will-change-[opacity]">
         <Image
           id="portraitSubject"
-          src="/ps_bw.png"
+          src="/pic_fg.png"
           alt=""
           className={`portrait pointer-events-none max-h-[80vh] max-w-[80vw] select-none object-contain transition-opacity will-change-[opacity]`}
           fill
@@ -310,9 +310,9 @@ export default function Header(props: HeaderProps) {
         >
           <rect
             x="50"
-            y="345"
+            y="500"
             width="500"
-            height="750"
+            height="630"
             fill="red"
             opacity={0}
             onMouseEnter={() => setSubjectVisible(true)}
