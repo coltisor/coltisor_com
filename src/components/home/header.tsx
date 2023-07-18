@@ -274,10 +274,13 @@ export default function Header(props: HeaderProps) {
 
       <div
         id="heading"
-        className="z-10 select-none pb-[25vh] text-center font-display text-[12vw] will-change-[opacity] [line-height:13vw] md:pb-[10vh] md:text-[10vw] md:[line-height:10vw]"
+        className="z-10 select-none pb-[5vh] text-center font-display text-[12vw] will-change-[opacity] [line-height:13vw] md:pb-[10vh] md:text-[10vw] md:[line-height:10vw]"
       >
         <h1 id="fullName">Victor</h1>
-        <h1 id="profession">Web Developer</h1>
+        <h1 id="profession">
+          <span className="md:hidden">Developer</span>
+          <span className="hidden md:block">Web Developer</span>
+        </h1>
         <h1 id="whenWhere">{___("Timisoara", lang)}</h1>
       </div>
 
