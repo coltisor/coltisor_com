@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Header from "@components/home/header";
-import About from "@components/home/about";
+import Header from "@components/header";
+import About from "@components/about";
 import { __ } from "@utils/translate";
 
 type HomeProps = {
