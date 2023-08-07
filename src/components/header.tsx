@@ -6,7 +6,6 @@ import { useEffect, useRef, useState } from "react";
 import { getRandomGreeting } from "@utils/greetings";
 import { useIsoEffect } from "@hooks/useIsoEffect";
 import { Breakpoints } from "@styles/breakpoints";
-import { useWindowSize } from "@hooks/useWindowSize";
 import { ___ } from "@utils/translate";
 import Link from "next/link";
 
@@ -21,7 +20,6 @@ export default function Header(props: HeaderProps) {
   const [hydrated, setHydrated] = useState(false);
   const [subjectVisible, setSubjectVisible] = useState(false);
   const [greeting, setGreeting] = useState("");
-  const { width } = useWindowSize();
 
   useEffect(() => {
     setHydrated(true);
@@ -300,7 +298,7 @@ export default function Header(props: HeaderProps) {
           id="portraitSubject"
           src="/pic_fg.png"
           alt=""
-          className={`portrait pointer-events-none max-h-[80vh] max-w-[80vw] select-none object-contain transition-opacity will-change-[opacity] grayscale-[100%]`}
+          className={`portrait pointer-events-none max-h-[80vh] max-w-[80vw] select-none object-contain grayscale-[100%] transition-opacity will-change-[opacity]`}
           fill
           style={{ opacity: subjectVisible ? 1 : 0 }}
         />

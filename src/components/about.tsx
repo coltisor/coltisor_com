@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
-import { useIsoEffect } from "../../hooks/useIsoEffect";
+import { useIsoEffect } from "../hooks/useIsoEffect";
 import { ___ } from "@utils/translate";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,7 +45,7 @@ export default function About(props: AboutProps) {
     >
       <p className="max-w-[512px] text-justify text-2xl">
         {___(
-          "Greetings, my name is Victor Coltisor and I am a pasionate and creative web developer. With over 4 years of professional experience in the field, I possess a strong skillset in both frontend and backend technologies. I currently serve as a Lead Engineer at %companyName%.",
+          "Greetings, my name is Victor Coltisor and I am a pasionate and creative web developer. With over 5 years of professional experience in the field, I possess a strong skillset in both frontend and backend technologies. I currently serve as a Lead Engineer at %companyName%.",
           lang,
           {
             "%companyName%": (
